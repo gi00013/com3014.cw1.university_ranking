@@ -11,4 +11,7 @@ package com3014.controller;
  */
 public class universityController {
     
+    public String name;
+    
+    
 }
