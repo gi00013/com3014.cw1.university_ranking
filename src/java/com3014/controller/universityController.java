@@ -7,7 +7,7 @@ package com3014.controller;
 
 /**
  *
- * @author giorgosioannidis
+ * @author 
  */
 public class universityController {
     
