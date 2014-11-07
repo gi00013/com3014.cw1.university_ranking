@@ -27,16 +27,7 @@ public class UniversityController {
     public String name;
     public int Unis;
     
-    protected final Log logger = LogFactory.getLog(getClass());
     
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        String now = (new Date()).toString();
-        logger.info("Returning hello view with " + now);
-
-        return new ModelAndView("WEB-INF/jsp/hello.jsp", "now", now);
     }
     
     
-}
