@@ -12,6 +12,7 @@ package com3014.controller;
 public class UniversityController {
     
     public String name;
+    public int Unis;
     
     
 }
