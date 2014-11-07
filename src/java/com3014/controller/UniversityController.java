@@ -26,6 +26,7 @@ public class UniversityController {
     
     public String name;
     public int Unis;
+    public String date;
     
     
     }
