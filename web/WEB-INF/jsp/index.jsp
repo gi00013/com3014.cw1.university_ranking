@@ -103,7 +103,7 @@
                     <div class="col-md-4">
                         <h2>University List</h2>
                         <p id = "homeColumns">A complete list of UK universities with general information .</p>
-                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/js/universityList.jsp" role="button">View details &raquo;</a></p>
+                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/js/universityLists.jsp" role="button">View details &raquo;</a></p>
                     </div>
                    
                 </div>
