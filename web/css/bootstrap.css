@@ -128,6 +128,8 @@ button,
 select {
   text-transform: none;
 }
+
+position {}
 button,
 html input[type="button"],
 input[type="reset"],

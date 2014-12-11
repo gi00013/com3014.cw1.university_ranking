@@ -24,4 +24,11 @@
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
+    <resource-ref>
+        <description>jdbc:mysql://localhost:3306/UNIVERSITIES?zeroDateTimeBehavior=convertToNull</description>
+        <res-ref-name>jdbc/com3014.cw1.university_ranking</res-ref-name>
+        <res-type>javax.sql.ConnectionPoolDataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
 </web-app>

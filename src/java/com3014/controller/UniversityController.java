@@ -22,7 +22,7 @@ import java.util.Date;
  *
  * @author 
  */
-public class UniversityController {
+public class UniversityController{
     
     public String name;
     public int Unis;
