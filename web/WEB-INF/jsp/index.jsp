@@ -88,9 +88,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h2>Essential Supplies</h2>
-
-                        <p id = "homeColumns">You are welcome to donate any dry food (rice, beans, canned food), cleaning equipments or unwanted clothes </p>
+                        <h2>University Recommendation System</h2>
+                        <p id = "homeColumns">Fill the fields and see the recommended universities</p>
                         <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/html/mainApp.html" role="button">View details &raquo;</a></p>
                     </div>
                     <div class="col-md-4">
@@ -103,9 +102,9 @@
                     <div class="col-md-4">
                         <h2>University List</h2>
                         <p id = "homeColumns">A complete list of UK universities with general information .</p>
+                        <br/><br/>
                         <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/js/universityLists.jsp" role="button">View details &raquo;</a></p>
-                    </div>
-                   
+                    </div>                   
                 </div>
             </div>
 
