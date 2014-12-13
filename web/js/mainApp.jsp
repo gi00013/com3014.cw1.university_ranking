@@ -1,3 +1,10 @@
+<%-- 
+    Document   : mainApp
+    Created on : Dec 12, 2014, 10:29:53 PM
+    Author     : giorgosioannidis
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,39 +65,63 @@
             </div>
         </div>
         <a href="../index.html"></a>
-        <form action="../js/showResult.jsp" method ="POST" >
+
         <div class="container">
+
+
 
             <div class ="columns" id = "sth">
                 <h1 id="title"> University Recommendation System </h1>
+
                 <div style="text-align: center">
                     <h3>Subject:</h3>
-                    <select name ="subjectS" id="subject" >
+                    <select id = "subject"">
                         <option value="selectSubject" >     --- Please Select Subject ---</option>
                         <option value="Accounting & finance">Accounting & finance</option>
+                        <option value="Agriculture, forestry & food">Agriculture, forestry & food</option>
                         <option value="American studies">American studies</option>
-                        <option value="Anatomy & Physiology">Anatomy & Physiology</option>
                         <option value="Anthropology">Anthropology</option>
                         <option value="Architecture">Architecture</option>
-                        <option value="Art">Art</option>
                         <option value="Biosciences">Biosciences</option>
+                        <option value="Building and town and country planning">Building and town and country planning</option>
+                        <option value="Business, management & marketing">Business, management & marketing</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Classics & ancient history">Classics & ancient history</option>
                         <option value="Computer science & information systems">Computer science & information systems</option>
                         <option value="Dentistry">Dentistry</option>
+                        <option value="Design & crafts">Design & crafts</option>
+                        <option value="Drama & dance">Drama & dance</option>
+                        <option value="Earth & marine sciences">Earth & marine sciences</option>
                         <option value="Economics">Economics</option>
                         <option value="Education">Education</option>
+                        <option value="Engineering: chemical">Engineering: chemical</option>
+                        <option value="Engineering: civil">Engineering: civil</option>
+                        <option value="Engineering: electronic & electrical">Engineering: electronic & electrical</option>
+                        <option value="Engineering: general">Engineering: general</option>
+                        <option value="Engineering: materials & mineral">Engineering: materials & mineral</option>
+                        <option value="Engineering: mechanical">Engineering: mechanical</option>
+                        <option value="English & creative writing">English & creative writing</option>
+                        <option value="Fashion & textiles">Fashion & textiles</option>
+                        <option value="Film production & photography">Film production & photography</option>
+                        <option value="Forensic science & archaeology">Forensic science & archaeology</option>
                         <option value="Geography & environmental studies">Geography & environmental studies</option>
+                        <option value="Health professions">Health professions</option>
                         <option value="History">History</option>
                         <option value="History of art">History of art</option>
+                        <option value="Hospitality, event management & tourism">Hospitality, event management & tourism</option>
+                        <option value="Journalism, publishing & public relations">Journalism, publishing & public relations</option>
                         <option value="Law">Law</option>
                         <option value="Mathematics">Mathematics</option>
+                        <option value="Media & film studies">Media & film studies</option>
                         <option value="Medicine">Medicine</option>
+                        <option value="Modern languages & linguistics">Modern languages & linguistics</option>
                         <option value="Music">Music</option>
                         <option value="Nursing & midwifery">Nursing & midwifery</option>
                         <option value="Pharmacy & pharmacology">Pharmacy & pharmacology</option>
                         <option value="Philosophy">Philosophy</option>
                         <option value="Physics">Physics</option>
-                        <option value="Politics">Politics</option>
                         <option value="Psychology">Psychology</option>
+                        <option value="Religious studies and theology">Religious studies and theology</option>
                         <option value="Social policy & administration">Social policy & administration</option>
                         <option value="Social work">Social work</option>
                         <option value="Sociology">Sociology</option>
@@ -192,11 +223,8 @@
                 <br/>
 
                 <div class ="wrapper">
-                    <input type="submit" value="Proceed" id="example-show" class="button btn-primary btn-lg" onclick="return validate();">
-                   
+                    <a  href="#" id="example-show" class="button btn-primary btn-lg" onclick="validate();">Proceed</a>
                 </div>
-                               
-
             </div>
 
            
@@ -205,7 +233,6 @@
                 <p class = "footer_p">&copy; Group 6 2014</p>
             </footer>
         </div>
-        </form>
 
         <!-- Bootstrap core JavaScript
            ================================================== -->

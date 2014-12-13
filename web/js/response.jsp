@@ -3,6 +3,7 @@
     Created on : Dec 10, 2014, 10:41:24 PM
     Author     : giorgosioannidis
 --%>
+<jsp:include page="mainApp.html"/>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <sql:query var="uniInfoRs" maxRows="1" dataSource="jdbc/com3014.cw1.university_ranking">

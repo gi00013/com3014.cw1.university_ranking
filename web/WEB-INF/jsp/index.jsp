@@ -60,7 +60,7 @@
             <div class="container">
                 <div id="wrap">
                     <!--  <h1>Give It To The Poor</h1> -->
-                    <h2>A non-profit web service that allows to donate  Essentail Supplies or money to people who need it more than you. </h2>
+                    <h2>This is the project of Giorgos Ioannidis, Maria Panteli, Stelios Savopoulos and Panayiotis Loizides for Advanced Web Challenges </h2>
                     <br/>
                     <a href="#" id="example-show" class="button btn-primary btn-lg" onclick="showHide('example');
                             return false;">Learn more &raquo;</a></p>
