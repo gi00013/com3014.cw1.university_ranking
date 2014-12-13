@@ -1,10 +1,6 @@
 
 function validate() {
-
-
-
 e = document.getElementById("subject").value;
-
 f = document.getElementById("location").value;
 g = document.getElementById("teachingSatisfaction").value;
 h = document.getElementById("careerOpportunities").value;

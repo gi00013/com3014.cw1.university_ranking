@@ -33,7 +33,15 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-       
+
+        <script src="jquery-latest.js" type="text/javascript"></script>
+        <script src="jquery.tablesorter.js" type="text/javascript"></script>
+        <script>
+            $(function () {
+                $("#racetimes").tablesorter({widgets: ['zebra']});
+            });
+        </script>
+
 
 
     </head>
@@ -76,39 +84,44 @@
 
 
             <h3>To view the additional information about an institution, please select it. </h3>
-            
+
             <sql:query var="institutions" dataSource="jdbc/com3014.cw1.university_ranking">
                 SELECT name, guardian_score, course_satisfaction, teaching_satisfaction, feedback_satisfaction, staff_student_ratio, spend_per_student	, entry_tariff, value_added, career, location FROM Institution
             </sql:query>
 
 
-            
 
-            <table id="racetimes">
-                <tr id="firstrow">
-                    
+
+            <table id="racetimes" class="tablesorter">
+                <thead>
+                    <tr id="firstrow">
+
                         <th id="th1">NAME</th>
-                       <th id="th1">Guardian score</th>
-                       <th id="th1">course Satisfaction</th>
-                       <th id="th1">Teaching Satisfaction</th>
-                       <th id="th1">Feedback Satisfaction</th>
-                       <th id="th1">Staff/Student ratio</th>
-                       <th id="th1">Spend per Student</th>
-                       <th id="th1">Entry Tariff</th>
-                       <th id="th1">Value Added</th>
-                       <th id="th1">Career Opportunities</th>
-                       <th id="th1">Location</th>
-                <c:forEach var="row" items="${institutions.rowsByIndex}">
-                    <tr id="tr1">
-                        <c:forEach var="column" items="${row}">
-                            <td id="td1"><c:out value="${column}"/></td>
-                        </c:forEach>
+                        <th id="th1">Guardian score</th>
+                        <th id="th1">course Satisfaction</th>
+                        <th id="th1">Teaching Satisfaction</th>
+                        <th id="th1">Feedback Satisfaction</th>
+                        <th id="th1">Staff/Student ratio</th>
+                        <th id="th1">Spend per Student</th>
+                        <th id="th1">Entry Tariff</th>
+                        <th id="th1">Value Added</th>
+                        <th id="th1">Career Opportunities</th>
+                        <th id="th1">Location</th>
                     </tr>
-                </c:forEach>
+                </thead>
+                <tbody>
+                    <c:forEach var="row" items="${institutions.rowsByIndex}">
+                        <tr id="tr1">
+                            <c:forEach var="column" items="${row}">
+                                <td id="td1"><c:out value="${column}"/></td>
+                            </c:forEach>
+                        </tr>
+                    </c:forEach>
+                </tbody>
             </table>
 
 
-            
+
 
         </div>
     </div>

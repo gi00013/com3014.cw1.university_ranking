@@ -23,8 +23,13 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="${pageContext.request.contextPath}/js/validation.jsp"></script>
-   
+        <script src="${pageContext.request.contextPath}/js/validation.js"></script>
+        <script>
+            
+        </script>
+        
+        
+        
     </head>
     <body>
 
@@ -60,7 +65,7 @@
             <div class="container">
                 <div id="wrap">
                     <!--  <h1>Give It To The Poor</h1> -->
-                    <h2>This is the project of Giorgos Ioannidis, Maria Panteli, Stelios Savopoulos and Panayiotis Loizides for Advanced Web Challenges </h2>
+                    <h2>This is the Group's 6 project for COM3014 cw1. </h2>
                     <br/>
                     <a href="#" id="example-show" class="button btn-primary btn-lg" onclick="showHide('example');
                             return false;">Learn more &raquo;</a></p>

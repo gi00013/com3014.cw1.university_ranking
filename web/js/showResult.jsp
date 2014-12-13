@@ -32,9 +32,15 @@
         <![endif]-->
 
 
-        <link href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-        <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<!--       <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+       <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.9.1/jquery.tablesorter.min.js"></script>-->
+       <script src="jquery-latest.js" type="text/javascript"></script>
+       <script src="jquery.tablesorter.js" type="text/javascript"></script>
+        <script>
+        $(function(){
+          $("#racetimes").tablesorter({widgets: ['zebra']});
+        });
+    </script>
 
     </head>
 
@@ -232,19 +238,21 @@
 
 
         <br/><br/>
-
+        
         <div class="jumbotron">
             <div class="container">
                 <h1> Recommended Institution for <%= request.getParameter("subjectS")%></h1>
 
                 <br/><br/>
-                <table id="racetimes">
-                    <tbody>
+                <table id="racetimes" class="tablesorter">
+                    <thead>
                         <tr id="firstrow">
                             <c:forEach var="columnName" items="${results.columnNames}">
                                 <th id="th1"><c:out value="${columnName}"/></th>
                                 </c:forEach>
                         </tr>
+                    </thead>
+                        <tbody>
                         <!-- column data -->
                         <c:forEach var="row" items="${results.rowsByIndex}">
                             <tr>
@@ -255,10 +263,8 @@
                         </c:forEach>
                     </tbody>
                 </table>
+
                 
-                <script>
-                    $('tbody').sortable();
-                </script>
             </div>
         </div>
         <footer>

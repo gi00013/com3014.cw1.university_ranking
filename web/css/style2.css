@@ -159,7 +159,13 @@ th, td { padding: 1.5rem; font-size: 1.3rem;width: 50px;
 
 #th1{
      padding-left: 10px; 
-     padding-right: 10px; 
+     padding-right: 10px;
+     background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position:  right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	white-space: normal;
+	padding: 4px 20px 4px 4px;
 }
 
 tr {background: hsl(50, 50%, 80%); }
@@ -180,4 +186,14 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
 		overflow-x: auto;
 		display: block;
 	}
+}
+
+/*************
+Default Theme
+*************/
+/* overall */
+
+.tablesorter-default .header,
+.tablesorter-default .tablesorter-header {
+	
 }
