@@ -42,6 +42,21 @@
             });
         </script>
 
+        <script
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<!--        <script>
+            var map;
+            function initialize() {
+                var mapOptions = {
+                    zoom: 15,
+                    center: new google.maps.LatLng(52.204262, 0.114927)
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>-->
 
 
     </head>
@@ -73,68 +88,67 @@
 
         </div>
         <a href="../index.html"></a>
-    </div>
-    <a href="../index.html"></a>
-    <br/><br/>
 
-    <div class="jumbotron">
-        <div class="container">
+        <a href="../index.html"></a>
+        <br/><br/>
 
-            <h1>University List</h1>
+        <div class="jumbotron">
+            <div class="container">
 
-
-            <h3>To view the additional information about an institution, please select it. </h3>
-
-            <sql:query var="institutions" dataSource="jdbc/com3014.cw1.university_ranking">
-                SELECT name, guardian_score, course_satisfaction, teaching_satisfaction, feedback_satisfaction, staff_student_ratio, spend_per_student	, entry_tariff, value_added, career, location FROM Institution
-            </sql:query>
+                <h1>University List</h1>
 
 
+                <h3>To view the additional information about an institution, please select it. </h3>
+
+                <sql:query var="institutions" dataSource="jdbc/com3014.cw1.university_ranking">
+                    SELECT name, guardian_score, course_satisfaction, teaching_satisfaction, feedback_satisfaction, staff_student_ratio, spend_per_student	, entry_tariff, value_added, career, location FROM Institution
+                </sql:query>
 
 
-            <table id="racetimes" class="tablesorter">
-                <thead>
-                    <tr id="firstrow">
 
-                        <th id="th1">NAME</th>
-                        <th id="th1">Guardian score</th>
-                        <th id="th1">course Satisfaction</th>
-                        <th id="th1">Teaching Satisfaction</th>
-                        <th id="th1">Feedback Satisfaction</th>
-                        <th id="th1">Staff/Student ratio</th>
-                        <th id="th1">Spend per Student</th>
-                        <th id="th1">Entry Tariff</th>
-                        <th id="th1">Value Added</th>
-                        <th id="th1">Career Opportunities</th>
-                        <th id="th1">Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <c:forEach var="row" items="${institutions.rowsByIndex}">
-                        <tr id="tr1">
-                            <c:forEach var="column" items="${row}">
-                                <td id="td1"><c:out value="${column}"/></td>
-                            </c:forEach>
+
+                <table id="racetimes" class="tablesorter">
+                    <thead>
+                        <tr id="firstrow">
+
+                            <th  id="th1">NAME</th>
+                            <th id="th1">Guardian score</th>
+                            <th id="th1">course Satisfaction</th>
+                            <th id="th1">Teaching Satisfaction</th>
+                            <th id="th1">Feedback Satisfaction</th>
+                            <th id="th1">Staff/Student ratio</th>
+                            <th id="th1">Spend per Student</th>
+                            <th id="th1">Entry Tariff</th>
+                            <th id="th1">Value Added</th>
+                            <th id="th1">Career Opportunities</th>
+                            <th id="th1">Location</th>
                         </tr>
-                    </c:forEach>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="row" items="${institutions.rowsByIndex}">
+                            <tr id="tr1">
+                                <c:forEach var="column" items="${row}">
+                                    <td id="td1"><c:out value="${column}"/></td>
+                                </c:forEach>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+
+                    <iframe src="https://mapsengine.google.com/map/embed?mid=zzeOparcwcI4.kH79Ga9sNLpI" width="640" height="480"></iframe>
 
 
-
-
+            </div>
         </div>
-    </div>
 
 
 
 
-</div>
-</div>
-<footer>
-    <p class = "footer_p">&copy; Group 6 2014</p>
-</footer>
-</body>
+
+        <footer>
+            <p class = "footer_p">&copy; Group 6 2014</p>
+        </footer>
+    </body>
 
 
 </html>
