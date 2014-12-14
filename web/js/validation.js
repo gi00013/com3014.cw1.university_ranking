@@ -50,7 +50,7 @@ return false;
 }
 else
 {
-window.location.href = '../js/showResult.jsp';
+window.location.href = '../jsp/showResult.jsp';
 }
 }
 

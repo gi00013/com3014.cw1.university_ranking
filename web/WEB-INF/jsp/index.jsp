@@ -45,15 +45,15 @@
                     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.htm">University Ranking</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" role="form">
+                    <form class="navbar-form navbar-right" role="form" method="post" action="jsp/login.jsp">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
+                            <input type="text" placeholder="Email" class="form-control" name="uname" value="">
                         </div>
                         <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
+                            <input type="password" placeholder="Password" class="form-control" name="pass" value="">
                         </div>
                         <button type="submit" class="btn btn-success">Sign in</button>
-                        <a href="#"  role="button" class="btn btn-primary"> Register </a>
+                        <a href="${pageContext.request.contextPath}/jsp/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -108,7 +108,7 @@
                         <h2>University List</h2>
                         <p id = "homeColumns">A complete list of UK universities with general information .</p>
                         <br/><br/>
-                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/js/universityLists.jsp" role="button">View details &raquo;</a></p>
+                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/universityLists.jsp" role="button">View details &raquo;</a></p>
                     </div>                   
                 </div>
             </div>
