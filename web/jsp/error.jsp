@@ -1,7 +1,13 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- 
+    Document   : mainApp.jsp
+    Created on : Dec 15, 2014, 12:27:16 AM
+    Author     : giorgosioannidis
+--%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,39 +15,31 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
+
         <title>University Ranking</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../css/style3.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../js/ie-emulation-modes-warning.js"></script>
+        <script src="../ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script src="../js/validation.js"></script>
 
 
-        <script src="../js/validation.js" type="text/javascript"></script>
-<!--        <script>
-            var map;
-            function initialize() {
-                var mapOptions = {
-                    zoom: 15,
-                    center: new google.maps.LatLng(52.204262, 0.114927)
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                        mapOptions);
-            }
 
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>-->
 
     </head>
+
     <body>
+
+
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -64,7 +62,6 @@
                         <div class="form-group">
                             <input type="password" placeholder="Password" class="form-control" name="pass" value="">
                         </div>
-                        
                         <button type="submit" class="btn btn-success">Sign in</button>
                         <a href="../jsp/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
@@ -79,59 +76,30 @@
             </div>
 
         </div>
-                     <div class="container">
+        <a href="../index.html"></a>
+        
+        <div class="container">
 
             <div class ="columns" id = "sth">
-                
-                <div style="text-align: center">
-                    <br><br>
-        <form method="post" action="registration.jsp" name="myForm" onsubmit="return validateForm();">
-            <center>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Enter Information Here</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>First Name</td>
-                        <td><input type="text" name="fname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>User Name</td>
-                        <td><input type="text" name="uname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="pass" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Retype Password</td>
-                        <td><input type="password" name="pass2" value="" /></td>
-                    </tr>                
-                    <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                   
-                </tbody>
-            </table>
-            </center>
-        </form>
-                </div>
+                <br><br>
+                <h1 id="title"> Please Sign in or Register </h1>
+                      
+
             </div>
-                          <footer>
-            <p class = "footer_p">&copy; Group 6 2014</p>
-        </footer>
-                     </div>
+
+           
+
+            <footer>
+                <p class = "footer_p">&copy; Group 6 2014</p>
+            </footer>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+           ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
 </html>

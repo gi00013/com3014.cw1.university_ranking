@@ -68,4 +68,61 @@ document.getElementById(shID).style.display = 'none';
 }
 }
 }
-  
+
+  function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var n = document.forms["myForm"]["fname"].value;
+    var l = document.forms["myForm"]["lname"].value;
+    var p1 = document.forms["myForm"]["pass"].value;
+    var p2 = document.forms["myForm"]["pass2"].value;
+    var e = document.forms["myForm"]["uname"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+    if (n==null || n=="") {
+        alert("First name must be filled out");
+        return false;
+    }
+    if (l==null || l=="") {
+        alert("Last name must be filled out");
+        return false;
+    }
+    if (p1!= "" || p1 != null) {
+        if(p1 != p2) {
+           alert("Error: Passwords do not match!");
+           return false;
+        }
+      if(p1 < 6) {
+        alert("Error: Password must contain at least six characters!");
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(p1)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(p1)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(p1)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      return false;
+    }
+    
+    
+    if(e < 3) {
+        alert("Error: Username must contain at least three characters!");
+        return false;
+    }
+    return true;
+  }

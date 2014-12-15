@@ -87,6 +87,7 @@
                     <br><br>
         <form method="post" action="registration.jsp" name="myForm" onsubmit="return validateForm();">
             <center>
+                <h1>Username or Email address already exist</h1>
             <table border="1" width="30%" cellpadding="5">
                 <thead>
                     <tr>

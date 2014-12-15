@@ -73,16 +73,26 @@
                     <a class="navbar-brand" href="../index.htm">University Ranking</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" role="form">
+                    <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
+                    <c:choose>
+                        <c:when test="${logged_in==null}">
+                    <form class="navbar-form navbar-right" role="form" method="post" action="login.jsp">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
+                            <input type="text" placeholder="Email" class="form-control" name="uname" value="">
                         </div>
                         <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
+                            <input type="password" placeholder="Password" class="form-control" name="pass" value="">
                         </div>
                         <button type="submit" class="btn btn-success">Sign in</button>
-                        <a href="register.html"  role="button" class="btn btn-primary"> Register </a>
+                        <a href="reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
+                        </c:when>
+                    <c:otherwise>
+                         <form class="navbar-form navbar-right" role="form" method="post" action="jsp/logout.jsp">
+                        <a href="logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
+                    </form>
+                    </c:otherwise>
+                    </c:choose>
                 </div><!--/.navbar-collapse -->
             </div>
 

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,10 +25,8 @@
         <![endif]-->
 
         <script src="${pageContext.request.contextPath}/js/validation.js"></script>
-        <script>
-            
-        </script>
         
+    
         
         
     </head>
@@ -45,6 +44,9 @@
                     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.htm">University Ranking</a>
                 </div>
                 <div class="navbar-collapse collapse">
+                    <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
+                    <c:choose>
+                        <c:when test="${logged_in==null}">
                     <form class="navbar-form navbar-right" role="form" method="post" action="jsp/login.jsp">
                         <div class="form-group">
                             <input type="text" placeholder="Email" class="form-control" name="uname" value="">
@@ -55,6 +57,14 @@
                         <button type="submit" class="btn btn-success">Sign in</button>
                         <a href="${pageContext.request.contextPath}/jsp/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
+                        </c:when>
+                    <c:otherwise>
+                         <form class="navbar-form navbar-right" role="form" method="post" action="jsp/logout.jsp">
+                        <a href="${pageContext.request.contextPath}/jsp/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
+                    </form>
+                    </c:otherwise>
+                        </c:choose>
+                    
                 </div><!--/.navbar-collapse -->
             </div>
         </div>
@@ -68,11 +78,15 @@
                     <h2>This is the Group's 6 project for COM3014 cw1. </h2>
                     <br/>
                     <a href="#" id="example-show" class="button btn-primary btn-lg" onclick="showHide('example');
-                            return false;">Learn more &raquo;</a></p>
+                            return false;">Learn more &raquo;</a>
                     <!--               <p id="follow"><a class="btn btn-primary btn-lg" role="button" href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Learn more &raquo;</a></p>-->
                 </div>
+                
+                
+                
 
                 <div id="example" class="more"> 
+                    
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vivamus egestas placerat mollis. Proin fringilla, turpis id blandit imperdiet, ligula massa gravida urna, in fringilla mauris ex posuere metus.
@@ -95,7 +109,14 @@
                     <div class="col-md-4">
                         <h2>University Recommendation System</h2>
                         <p id = "homeColumns">Fill the fields and see the recommended universities</p>
-                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/html/mainApp.html" role="button">View details &raquo;</a></p>
+                        <c:choose>
+                        <c:when test="${logged_in==null}">
+                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/error.jsp" role="button">View details &raquo;</a></p>
+                        </c:when>
+                        <c:otherwise>
+                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/mainApp.jsp" role="button">View details &raquo;</a></p>
+                        </c:otherwise>
+                        </c:choose>
                     </div>
                     <div class="col-md-4">
                         <h2>Contact Us</h2>
