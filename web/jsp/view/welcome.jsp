@@ -15,18 +15,18 @@
         <title>University Ranking</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../ie-emulation-modes-warning.js"></script>
+        <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <script src="../js/validation.js"></script>
+        <script src="../../js/validation.js"></script>
 
 
 
@@ -42,21 +42,12 @@
                 
                 <div style="text-align: center">
 
-<%
-    if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
-%>
-You are not logged in<br/>
-<a href="../index.htm">Please Login</a>
-<%} else {
-%>
-Welcome <%=session.getAttribute("userid")%>
-<a href='logout.jsp'>Log out</a>
+
+                    <h1>You have been successfully registered!! You are now being redirected to the homepage to log in!!</h1>
+
 <script>
-    setTimeout(function(){window.location.href='../index.htm'},1000);
+    setTimeout(function(){window.location.href='../../index.htm'},4000);
 </script>
-<%
-    }
-%>
-                </div>
+           </div>
             </div>
 </div>

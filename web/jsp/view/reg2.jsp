@@ -12,11 +12,11 @@
         <title>University Ranking</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../css/style3.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/style3.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../js/ie-emulation-modes-warning.js"></script>
+        <!--[if lt IE 9]><script src="../../js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,20 +25,7 @@
         <![endif]-->
 
 
-        <script src="../js/validation.js" type="text/javascript"></script>
-<!--        <script>
-            var map;
-            function initialize() {
-                var mapOptions = {
-                    zoom: 15,
-                    center: new google.maps.LatLng(52.204262, 0.114927)
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                        mapOptions);
-            }
-
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>-->
+        <script src="../../js/validation.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -51,13 +38,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../index.htm">University Ranking</a>
+                    <a class="navbar-brand" href="../../index.htm">University Ranking</a>
                 </div>
                 <div class="navbar-collapse collapse">
                      <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
                     <c:choose>
                         <c:when test="${logged_in==null}">
-                    <form class="navbar-form navbar-right" role="form" method="post" action="../jsp/login.jsp">
+                    <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
                         <div class="form-group">
                             <input type="text" placeholder="Email" class="form-control" name="uname" value="">
                         </div>
@@ -66,12 +53,12 @@
                         </div>
                         
                         <button type="submit" class="btn btn-success">Sign in</button>
-                        <a href="../jsp/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
+                        <a href="../view/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
                         </c:when>
                     <c:otherwise>
-                         <form class="navbar-form navbar-right" role="form" method="post" action="jsp/logout.jsp">
-                        <a href="logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
+                         <form class="navbar-form navbar-right" role="form" method="post" action="../security/logout.jsp">
+                        <a href="../security/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
                     </form>
                     </c:otherwise>
                         </c:choose>
@@ -85,7 +72,7 @@
                 
                 <div style="text-align: center">
                     <br><br>
-        <form method="post" action="registration.jsp" name="myForm" onsubmit="return validateForm();">
+        <form method="post" action="../security/registration.jsp" name="myForm" onsubmit="return validateForm();">
             <center>
                 <h1>Username or Email address already exist</h1>
             <table border="1" width="30%" cellpadding="5">

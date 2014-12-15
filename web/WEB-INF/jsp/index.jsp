@@ -47,7 +47,7 @@
                     <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
                     <c:choose>
                         <c:when test="${logged_in==null}">
-                    <form class="navbar-form navbar-right" role="form" method="post" action="jsp/login.jsp">
+                    <form class="navbar-form navbar-right" role="form" method="post" action="jsp/security/login.jsp">
                         <div class="form-group">
                             <input type="text" placeholder="Email" class="form-control" name="uname" value="">
                         </div>
@@ -55,12 +55,12 @@
                             <input type="password" placeholder="Password" class="form-control" name="pass" value="">
                         </div>
                         <button type="submit" class="btn btn-success">Sign in</button>
-                        <a href="${pageContext.request.contextPath}/jsp/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
+                        <a href="${pageContext.request.contextPath}/jsp/view/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
                     </form>
                         </c:when>
                     <c:otherwise>
-                         <form class="navbar-form navbar-right" role="form" method="post" action="jsp/logout.jsp">
-                        <a href="${pageContext.request.contextPath}/jsp/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
+                         <form class="navbar-form navbar-right" role="form" method="post" action="jsp/security/logout.jsp">
+                        <a href="${pageContext.request.contextPath}/jsp/security/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
                     </form>
                     </c:otherwise>
                         </c:choose>
@@ -68,19 +68,19 @@
                 </div><!--/.navbar-collapse -->
             </div>
         </div>
-
+                   
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <div id="wrap">
+                <br>
                     <!--  <h1>Give It To The Poor</h1> -->
                     <h2>This is the Group's 6 project for COM3014 cw1. </h2>
                     <br/>
                     <a href="#" id="example-show" class="button btn-primary btn-lg" onclick="showHide('example');
                             return false;">Learn more &raquo;</a>
                     <!--               <p id="follow"><a class="btn btn-primary btn-lg" role="button" href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Learn more &raquo;</a></p>-->
-                </div>
+               
                 
                 
                 
@@ -111,10 +111,10 @@
                         <p id = "homeColumns">Fill the fields and see the recommended universities</p>
                         <c:choose>
                         <c:when test="${logged_in==null}">
-                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/error.jsp" role="button">View details &raquo;</a></p>
+                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/view/error.jsp" role="button">View details &raquo;</a></p>
                         </c:when>
                         <c:otherwise>
-                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/mainApp.jsp" role="button">View details &raquo;</a></p>
+                            <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/view/mainApp.jsp" role="button">View details &raquo;</a></p>
                         </c:otherwise>
                         </c:choose>
                     </div>
@@ -122,14 +122,14 @@
                         <h2>Contact Us</h2>
                         <p id = "homeColumns"> Giorgos Ioannidis   gi00013@surrey.ac.uk<br>
                             Panayiotis Loizides pl00089@surrey.ac.uk<br>
-                            Maria Panteli       mm00214@surrey.ac.uk<br>
+                            Maria Panteli       mp00214@surrey.ac.uk<br>
                             Stelios Savvopoulos ss00434@surrey.ac.uk</p>
                     </div>
                     <div class="col-md-4">
                         <h2>University List</h2>
                         <p id = "homeColumns">A complete list of UK universities with general information .</p>
                         <br/><br/>
-                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/universityLists.jsp" role="button">View details &raquo;</a></p>
+                        <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/database/universityLists.jsp" role="button">View details &raquo;</a></p>
                     </div>                   
                 </div>
             </div>

@@ -16,15 +16,15 @@
     
     if (i > 0) {
         //session.setAttribute("userid", user);
-        response.sendRedirect("welcome.jsp");
+        response.sendRedirect("../view/welcome.jsp");
        // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
     } else {
-        response.sendRedirect("../index.htm");
+        response.sendRedirect("../../index.htm");
     }
     }
     catch(SQLException e)
     {
       e.printStackTrace();
-      response.sendRedirect("reg2.jsp");
+      response.sendRedirect("../view/reg2.jsp");
     }
 %>
