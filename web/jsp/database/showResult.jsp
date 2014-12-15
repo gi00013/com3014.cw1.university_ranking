@@ -23,7 +23,7 @@
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="js/ie-emulation-modes-warning.js"></script>
+        <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -34,8 +34,8 @@
 
         <!--       <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
                <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.9.1/jquery.tablesorter.min.js"></script>-->
-        <script src="../js/jquery-latest.js" type="text/javascript"></script>
-        <script src="../js/jquery.tablesorter.js" type="text/javascript"></script>
+        <script src="../../js/jquery-latest.js" type="text/javascript"></script>
+        <script src="../../js/jquery.tablesorter.js" type="text/javascript"></script>
         <script>
             $(function () {
                 $("#racetimes").tablesorter({widgets: ['zebra']});
@@ -76,7 +76,7 @@
                         <c:when test="${logged_in==null}">
                     <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control" name="uname" value="">
+                            <input type="text" placeholder="User Name" class="form-control" name="uname" value="">
                         </div>
                         <div class="form-group">
                             <input type="password" placeholder="Password" class="form-control" name="pass" value="">
@@ -553,9 +553,9 @@
                     <tbody>
                         <!-- column data -->
                         <c:forEach var="row" items="${results.rowsByIndex}">
-                            <tr>
+                            <tr id="tr1">
                                 <c:forEach var="column" items="${row}">
-                                    <td><c:out value="${column}"/></td>
+                                    <td id="td1"><c:out value="${column}"/></td>
                                 </c:forEach>
                             </tr>
                         </c:forEach>
@@ -575,7 +575,6 @@
 <!-- Bootstrap core JavaScript
            ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../js/ie10-viewport-bug-workaround.js"></script>

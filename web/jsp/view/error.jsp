@@ -57,7 +57,7 @@
                         <c:when test="${logged_in==null}">
                     <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control" name="uname" value="">
+                            <input type="text" placeholder="User Name" class="form-control" name="uname" value="">
                         </div>
                         <div class="form-group">
                             <input type="password" placeholder="Password" class="form-control" name="pass" value="">

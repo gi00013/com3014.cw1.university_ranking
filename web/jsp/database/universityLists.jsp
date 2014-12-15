@@ -24,7 +24,7 @@
         <link href="../../css/style2.css" rel="stylesheet" type="text/css"/>
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="../../js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -61,6 +61,7 @@
 
     </head>
     <body>
+        <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -78,7 +79,7 @@
                         <c:when test="${logged_in==null}">
                     <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control" name="uname" value="">
+                            <input type="text" placeholder="User Name" class="form-control" name="uname" value="">
                         </div>
                         <div class="form-group">
                             <input type="password" placeholder="Password" class="form-control" name="pass" value="">
@@ -119,7 +120,7 @@
                     <thead>
                         <tr id="firstrow">
 
-                            <th  id="th1">NAME</th>
+                            <th id="th1">NAME</th>
                             <th id="th1">Guardian score</th>
                             <th id="th1">course Satisfaction</th>
                             <th id="th1">Teaching Satisfaction</th>
@@ -161,7 +162,6 @@
         <!-- Bootstrap core JavaScript
            ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../js/ie10-viewport-bug-workaround.js"></script>

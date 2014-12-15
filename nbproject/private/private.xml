@@ -22,13 +22,28 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/spring-security.xml</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/reg.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/redirect.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/login.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/spring-database.xml</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/admin.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/database/showResult.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/src/java/com3014/controller/MainController.java</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/success.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/web.xml</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/welcome.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/security/registration.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/error.jsp</file>
             <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/html/mainApp.html</file>
-            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/js/universityLists.jsp</file>
-            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/newfile</file>
-            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/js/showResult.jsp</file>
-            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/css/style2.css</file>
-            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/js/validation.js</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/mainApp.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/view/reg2.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/database/universityLists.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/hello.jsp</file>
             <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/Users/giorgosioannidis/com3014.cw1/com3014.cw1.university_ranking1/web/jsp/403.jsp</file>
         </group>
     </open-files>
 </project-private>
