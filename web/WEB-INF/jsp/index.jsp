@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>University Ranking</title>
+        <title>University Recommendation System</title>
 
         <!--        include custom css file for styling-->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
@@ -46,7 +47,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.htm">University Ranking</a>
+                    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.htm">University Recommendation System</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <!--                    sets the variable logged_in as the user's username. If the username = null then the user is not logged in-->
@@ -90,11 +91,14 @@
                 <div id="example" class="more"> 
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus egestas placerat mollis. Proin fringilla, turpis id blandit imperdiet, ligula massa gravida urna, in fringilla mauris ex posuere metus.
-                        Nullam nec ipsum aliquam, accumsan tortor vel, dictum diam. Proin id ligula vestibulum, maximus augue nec, dictum diam. Etiam a libero quis mi ullamcorper iaculis. 
-                        In ac molestie dui. Curabitur ut metus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque diam diam, ut fringilla tortor aliquet a.
-                        Nulla venenatis luctus ipsum et iaculis. Sed commodo velit nec suscipit mattis. Praesent porttitor eleifend vulputate.
+                        Your University, your choice!!!
+                        The University recommendation system, takes into account your preferred choices. That means that the order in which you select what interests you more, 
+                        when looking for a university, matters! For instance if you select Location as your 1st option and student satisfaction as your 2nd because you want to have a 
+                        good time while studying at the university,
+                        then the system takes your preferences into account and produces a list of results based on your needs! All fields are rescaled to the same range so there are no deviations. 
+                        Each field gets multiplied by a factor depending on the order that you select them, and the result derives from another operation (Secret). Don’t panic if you see  
+                        negative results in the recommendation list. That happens when the location is important to you and the system tells you that you should stay
+                        away from that University. Other than that enjoy the website!!
                     </p>
                     <p><a href="#" id="example-hide" class="button btn-primary btn-lg" onclick="showHide('example');
                             return false;">Hide ^</a></p>

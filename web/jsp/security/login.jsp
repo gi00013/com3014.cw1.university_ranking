@@ -15,7 +15,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>University Ranking</title>
+        <title>University Recommendation System</title>
 
 
         <link href="../../css/style.css" rel="stylesheet" type="text/css"/>

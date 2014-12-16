@@ -17,7 +17,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>University Ranking</title>
+        <title>University Recommendation System</title>
 
         <!--       custom css file for styling-->
         <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../index.htm">University Ranking</a>
+                    <a class="navbar-brand" href="../../index.htm">University Recommendation System</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>

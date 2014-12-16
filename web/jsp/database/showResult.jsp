@@ -18,7 +18,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
-        <title>University Ranking</title>
+        <title>University Recommendation System</title>
 
         <!--        custom css file for styling-->
         <link href="../../css/style2.css" rel="stylesheet" type="text/css"/>
@@ -70,7 +70,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../index.htm">University Ranking</a>
+                    <a class="navbar-brand" href="../../index.htm">University Recommendation System</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <!--                    sets the variable logged_in as the user's username. If the username = null then the user is not logged in-->

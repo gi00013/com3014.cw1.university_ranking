@@ -18,7 +18,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
-        <title>University Ranking</title>
+        <title>University Recommendation System</title>
 
         <!--       custom css file for styling-->
         <link href="../../css/style2.css" rel="stylesheet" type="text/css"/>
@@ -64,7 +64,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../index.htm">University Ranking</a>
+                    <a class="navbar-brand" href="../../index.htm">University Recommendation System</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <!--                    sets the variable logged_in as the user's username. If the username = null then the user is not logged in-->
@@ -98,7 +98,7 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>University List</h1>
-                <h3>To view the additional information about an institution, please select it. </h3>
+                <h2>This is the overall University Ranking Table: </h2>
 
                 <!--                creates connection with the database and retrieving data from it-->
                 <sql:query var="institutions" dataSource="jdbc/com3014.cw1.university_ranking">
@@ -134,7 +134,9 @@
                 </table>
 
                 <!--                    adding the map to the page-->
+                
                 <iframe src="https://mapsengine.google.com/map/embed?mid=zzeOparcwcI4.kH79Ga9sNLpI" width="640" height="480"></iframe>
+               
             </div>
         </div>
         <!--        footer that shows the group's number at the bottom left of the page-->
