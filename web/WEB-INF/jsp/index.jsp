@@ -81,7 +81,7 @@
             <div class="container">
                 <br>
                 <!--  <h1>Give It To The Poor</h1> -->
-                <h2>This is the Group's 6 project for COM3014 cw1. </h2>
+                <h2>Your University, your choice!!! </h2>
                 <br/>
                 <!--                button to show or hide the div below.-->
                 <a href="#" id="example-show" class="button btn-primary btn-lg" onclick="showHide('example');
@@ -91,7 +91,7 @@
                 <div id="example" class="more"> 
 
                     <p>
-                        Your University, your choice!!!
+                        
                         The University recommendation system, takes into account your preferred choices. That means that the order in which you select what interests you more, 
                         when looking for a university, matters! For instance if you select Location as your 1st option and student satisfaction as your 2nd because you want to have a 
                         good time while studying at the university,
@@ -99,11 +99,10 @@
                         Each field gets multiplied by a factor depending on the order that you select them, and the result derives from another operation (Secret). Don’t panic if you see  
                         negative results in the recommendation list. That happens when the location is important to you and the system tells you that you should stay
                         away from that University. Other than that enjoy the website!!
-                    </p>
-                    <p><a href="#" id="example-hide" class="button btn-primary btn-lg" onclick="showHide('example');
+                    </p>                   
+                    <p><a href="#" id="example-hide" class="button btn-primary btn-lg" onclick="showHide('example'); 
                             return false;">Hide ^</a></p>
                 </div>
-
             </div>
         </div>
 
@@ -114,7 +113,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <h2>University Recommendation System</h2>
-                        <p id = "homeColumns">Fill the fields and see the recommended universities</p>
+                        <p id = "homeColumns">Fill in your preferred choices in the fields and get the most suitable universities for you.</p>
                         <!--   checks if the user is loggedin and if correct return the mainApp page. If not return the error page-->
                         <c:choose>
                             <c:when test="${logged_in==null}">
@@ -134,7 +133,7 @@
                     </div>
                     <div class="col-md-4">
                         <h2>University List</h2>
-                        <p id = "homeColumns">A complete list of UK universities with general information .</p>
+                        <p id = "homeColumns">View the overall UK university ranking table.</p>
                         <br/><br/>
                         <!--                        button to return the universityLists page-->
                         <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/database/universityLists.jsp" role="button">View details &raquo;</a></p>
