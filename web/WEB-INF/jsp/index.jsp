@@ -11,7 +11,7 @@
 
         <title>University Ranking</title>
 
-<!--        include custom css file for styling-->
+        <!--        include custom css file for styling-->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css" />
@@ -132,7 +132,7 @@
                         <h2>University List</h2>
                         <p id = "homeColumns">A complete list of UK universities with general information .</p>
                         <br/><br/>
-<!--                        button to return the universityLists page-->
+                        <!--                        button to return the universityLists page-->
                         <p id="test"><a class="btn btn-default" href="${pageContext.request.contextPath}/jsp/database/universityLists.jsp" role="button">View details &raquo;</a></p>
                     </div>                   
                 </div>
@@ -141,7 +141,7 @@
 
 
         </div> <!-- /container -->
-<!--        footer that shows the group's number at the bottom left of the page-->
+        <!--        footer that shows the group's number at the bottom left of the page-->
         <footer>
             <p class = "footer_p">&copy; Group 6 2014</p>
         </footer>

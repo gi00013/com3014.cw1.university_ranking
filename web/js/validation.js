@@ -1,4 +1,6 @@
-
+//gets values from input fileds and assign them to a variable. Then checks if a value is being used twice. 
+//Also checks if the user did not choose a number.constructor. I anything of that is trure it return an alert message.
+//if nothing is wrong, redirect to the showResults page.
 function validate() {
 e = document.getElementById("subject").value;
 f = document.getElementById("location").value;
@@ -55,7 +57,7 @@ window.location.href = '../jsp/showResult.jsp';
 }
 
 
-
+//Function to show or hide the div in the hidden in the index page.
 function showHide(shID) {
 if (document.getElementById(shID)) {
 if (document.getElementById(shID + '-show').style.display != 'none') {
@@ -68,7 +70,9 @@ document.getElementById(shID).style.display = 'none';
 }
 }
 }
-
+//function to validate the registration form. Assign the value of the input field to a variable.
+//Then checks if there is any empty fields. Also checks the length of the username, check the email filed and the password
+//to contain a number, a leeter, a capital letter, if the two passwords are the same and the length of the password
   function validateForm() {
     var x = document.forms["myForm"]["email"].value;
     var n = document.forms["myForm"]["fname"].value;
@@ -118,8 +122,6 @@ document.getElementById(shID).style.display = 'none';
       alert("Error: Please check that you've entered and confirmed your password!");
       return false;
     }
-    
-    
     if(e < 3) {
         alert("Error: Username must contain at least three characters!");
         return false;

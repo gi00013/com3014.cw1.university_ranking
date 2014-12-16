@@ -25,6 +25,7 @@ h2{
 
 }
 
+
 .columns {
     background-color:#eee;
     opacity: 0.9;
@@ -32,7 +33,6 @@ h2{
 }
 
 .columns p{
-
     height:100px;
 }
 
