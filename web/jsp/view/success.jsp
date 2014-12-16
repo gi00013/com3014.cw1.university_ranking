@@ -1,4 +1,4 @@
-
+<%-- Including jstl libraries --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,11 +14,11 @@
 
         <title>University Ranking</title>
 
-        <!-- Bootstrap core CSS -->
+        <!--       custom css file for styling-->
         <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap core CSS -->
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
         <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,37 +26,34 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <script src="../../js/validation.js"></script>
-
-
-
-
     </head>
-
-
-<div class="container">
-
-    <br>
-    <br>
+    <body>
+        <!--        div to make the data visible against the background image-->
+        <div class="container">
+            <br>
+            <br>
             <div class ="columns" id = "sth">
-                
-                <div style="text-align: center">
-
-<%
-    if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
-%>
-You are not logged in<br/>
-<a href="../../index.htm">Please Login</a>
-<%} else {
-%>
-Welcome <%=session.getAttribute("userid")%>
-<a href='../security/logout.jsp'>Log out</a>
-<script>
-    setTimeout(function(){window.location.href='../../index.htm'},1000);
-</script>
-<%
-    }
-%>
+                <div>
+                    <!--                    checks the userid name. If it is null shows a Please login message with a link to the homepage. If not, show Welcome and the username of the user. the window automatically redirects to the homepage after 1s. -->
+                    <%
+                        if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+                    %>
+                    You are not logged in<br/>
+                    <a href="../../index.htm">Please Login</a>
+                    <%} else {
+                    %>
+                    Welcome <%=session.getAttribute("userid")%>
+                    <a href='../security/logout.jsp'>Log out</a>
+                    <script>
+                        setTimeout(function () {
+                            window.location.href = '../../index.htm'
+                        }, 1000);
+                    </script>
+                    <%
+                        }
+                    %>
                 </div>
             </div>
-</div>
+        </div>
+    </body>
+</html>

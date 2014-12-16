@@ -1,3 +1,4 @@
+<%-- Including jstl library --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,11 +12,11 @@
         <link rel="icon" href="../../favicon.ico">
         <title>University Ranking</title>
 
-        <!-- Bootstrap core CSS -->
+        <!--       custom css file for styling-->
         <link href="../../css/style3.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap core CSS -->
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../js/ie8-responsive-file-warning.js"></script><![endif]-->
+
         <script src="../../js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,11 +25,13 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-
+        <!--        import the javascript file which includes the function to validate if the user has correctly inserted amil, password, username, first name and last name-->
         <script src="../../js/validation.js" type="text/javascript"></script>
-
     </head>
     <body>
+
+        <!--        navbar where includes a link for the home-page. In addition it checks 
+              if the user is logged in then show the log out button. If not, how the login and register buttons. Also, the navbar collapses for smaller screens.-->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -41,85 +44,88 @@
                     <a class="navbar-brand" href="../../index.htm">University Ranking</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                     <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
+                    <!--        sets the user's username to a variable logged_in-->
+                    <c:set var="logged_in" value="<%=session.getAttribute("userid")%>"/>
+                    <!--                    sets the variable logged_in as the user's username. If the username = null then the user is not logged in-->
                     <c:choose>
                         <c:when test="${logged_in==null}">
-                    <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
-                        <div class="form-group">
-                            <input type="text" placeholder="User Name" class="form-control" name="uname" value="">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control" name="pass" value="">
-                        </div>
-                        
-                        <button type="submit" class="btn btn-success">Sign in</button>
-                        <a href="../view/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
-                    </form>
+                            <form class="navbar-form navbar-right" role="form" method="post" action="../security/login.jsp">
+                                <div class="form-group">
+                                    <input type="text" placeholder="User Name" class="form-control" name="uname" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control" name="pass" value="">
+                                </div>
+                                <button type="submit" class="btn btn-success">Sign in</button>
+                                <a href="../view/reg.jsp"  role="button" class="btn btn-primary"> Register </a>
+                            </form>
                         </c:when>
-                    <c:otherwise>
-                         <form class="navbar-form navbar-right" role="form" method="post" action="../security/logout.jsp">
-                        <a href="../security/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
-                    </form>
-                    </c:otherwise>
-                        </c:choose>
+                        <c:otherwise>
+                            <form class="navbar-form navbar-right" role="form" method="post" action="../security/logout.jsp">
+                                <a href="../security/logout.jsp"  role="button" class="btn btn-primary"> Logout </a>
+                            </form>
+                        </c:otherwise>
+                    </c:choose>
                 </div><!--/.navbar-collapse -->
             </div>
-
         </div>
-                     <div class="container">
-
+        <!--        div to make the data visible against the background image-->
+        <div class="container">
             <div class ="columns" id = "sth">
-                
-                <div style="text-align: center">
-                    <br><br>
-        <form method="post" action="../security/registration.jsp" name="myForm" onsubmit="return validateForm();">
-            <center>
-                <h1>Username or Email address already exist</h1>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Enter Information Here</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>First Name</td>
-                        <td><input type="text" name="fname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>User Name</td>
-                        <td><input type="text" name="uname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="pass" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Retype Password</td>
-                        <td><input type="password" name="pass2" value="" /></td>
-                    </tr>                
-                    <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                   
-                </tbody>
-            </table>
-            </center>
-        </form>
+                <div>
+                    <br>
+                    <br>
+
+                    <!--                form that sends the values to the registration.jsp page.-->
+                    <form method="post" action="../security/registration.jsp" name="myForm" onsubmit="return validateForm();">
+                        <center>
+                            <h1>Email or User name already exists. Please try again.</h1>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Enter Information Here</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td><input type="text" name="fname" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name</td>
+                                        <td><input type="text" name="lname" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><input type="text" name="email" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>User Name</td>
+                                        <td><input type="text" name="uname" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password</td>
+                                        <td><input type="password" name="pass" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Retype Password</td>
+                                        <td><input type="password" name="pass2" value="" /></td>
+                                    </tr>                
+                                    <tr>
+                                        <td><input type="reset" value="Reset" /></td>
+                                        <td><input type="submit" value="Submit" /></td>                                      
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </center>
+                    </form>
                 </div>
             </div>
-                          <footer>
-            <p class = "footer_p">&copy; Group 6 2014</p>
-        </footer>
-                     </div>
+            <!--        footer that shows the group's number at the bottom left of the page-->
+            <footer>
+                <p class = "footer_p">&copy; Group 6 2014</p>
+            </footer>
+        </div>
     </body>
 </html>
